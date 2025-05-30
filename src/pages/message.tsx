@@ -1,22 +1,13 @@
-
-import { Star } from "lucide-react";
 import Head from "./head";
-import Nav from "./Nav";
 import Text from "./text";
 export default function Message() {
     return (
-        <section className=" w-screen p-4">
-            <Nav />
-  
-
-            <div className="flex flex-row items-center justify-between my-5 ">
-                <h1 className="text-2xl font-medium text-foreground">Message</h1>
-                <Star />
-            </div>
+        <section className=" w-screen px-4  pb-1">
+            
 
 
 
-            <Head />
+            <Head from="me" to="CSE" date="2025-05-31" time="10:00:00" />
             <Text />
         </section>
     );

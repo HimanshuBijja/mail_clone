@@ -2,28 +2,28 @@ import { ChevronDown, ChevronUp, CornerUpLeft, MoreHorizontal } from "lucide-rea
 import { useState } from "react";
 import Dropdown from "./dropdown";
 
-export default function Head() {
+export default function Head({from, to, date, time}: {from: string, to: string, date: string, time: string}) {
 
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="my-5">
+        <div className="mb-5 mt-3">
             <div className="grid grid-cols-8 items-center">
                 <div className="col-span-1 justify-self-start">
-                    <div className=" w-12 h-12 rounded-full bg-pink-400">
+                    <div className=" w-12 h-12 rounded-full bg-amber-950">
 
                     </div>
                 </div>
                 <div className="col-span-6 px-6">
                     <div className=" flex flex-row items-center gap-3">
                         <div className="text-foreground font-medium">
-                            me
+                            {from}
                         </div>
                         <div>
-                            Date
+                            {date}
                         </div>
                     </div>
                     <div className="flex flex-row items-center gap-2">
-                        to CSE
+                        {to}
                         {isOpen ? <ChevronUp className="w-4 h-4" onClick={() => setIsOpen(!isOpen)} /> : <ChevronDown className="w-4 h-4" onClick={() => setIsOpen(!isOpen)} />}
                     </div>
                 </div>
@@ -35,7 +35,7 @@ export default function Head() {
                 </div>
 
             </div>
-            {isOpen && <Dropdown />}
+            {isOpen && <Dropdown from={from} to={to} date={date} time={time} />}
         </div>
     );
 }
