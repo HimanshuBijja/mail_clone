@@ -1,21 +1,11 @@
 import { ChevronDown, ChevronLeft, ChevronUp, LucideTrash2, Mail, MailIcon, MoreHorizontal, Star, Trash, Trash2, Trash2Icon, TrashIcon } from 'lucide-react'
 import './App.css'
-
+import Message from './pages/message'
 function App() {
 
   return (
     <div className=''>
-      <Star />
-      <Trash2Icon />
-      <MailIcon />
-      <MoreHorizontal />
-      <ChevronLeft />
-      <ChevronDown />
-      <ChevronUp />
-      hello
-      <div className='text-line'>
-        wassup
-      </div>
+      <Message />
     </div>
   )
 }
