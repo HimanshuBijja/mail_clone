@@ -2,11 +2,10 @@
 import { Star } from "lucide-react";
 import Head from "./head";
 import Nav from "./Nav";
-import Dropdown from "./dropdown";
-
+import Text from "./text";
 export default function Message() {
     return (
-        <section className="h-screen w-screen p-4">
+        <section className=" w-screen p-4">
             <Nav />
   
 
@@ -18,7 +17,7 @@ export default function Message() {
 
 
             <Head />
-            <Dropdown />
+            <Text />
         </section>
     );
 }
