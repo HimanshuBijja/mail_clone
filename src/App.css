@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+
+
 @font-face {
     font-family: "san francisco";
     src: url("./assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
