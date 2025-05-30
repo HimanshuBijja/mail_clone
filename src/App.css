@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
-body {
-  background-color: #202125;
+@font-face {
+    font-family: "san francisco";
+    src: url("./assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+}
+
+@theme {
+    --color-foreground: hsl(var(--foreground));
+    --color-background: hsl(var(--background));
+    --color-line: hsl(var(--line));
+    --color-secondary: hsl(var(--secondary));
+}
+
+@layer base {
+    :root {
+        --background: 228, 7%, 14%;
+        --foreground: 220, 4%, 84%;
+        --line: 215, 77%, 66%;
+        --secondary: 218, 4%, 63%;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: san francisco;
+    }
 }
