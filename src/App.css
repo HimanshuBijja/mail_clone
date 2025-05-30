@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-
-
-
 @font-face {
-    font-family: "san francisco";
-    src: url("./assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @theme {
@@ -23,8 +22,8 @@
         --secondary: 218, 4%, 63%;
     }
     body {
-        @apply bg-background text-foreground;
-        font-family: san francisco;
+        @apply bg-background text-secondary/70;
+        font-family: "Roboto", sans-serif;
         font-size: 16px;
     }
 }
