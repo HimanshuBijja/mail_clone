@@ -1,10 +1,5 @@
-import {
-    ChevronLeft,
-    Mail,
-    MoreHorizontal,
-    Star,
-    Trash2Icon,
-} from "lucide-react";
+
+import { Star } from "lucide-react";
 import Head from "./head";
 import Nav from "./Nav";
 
