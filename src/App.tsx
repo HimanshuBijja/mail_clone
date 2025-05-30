@@ -13,7 +13,7 @@ function App() {
       <ChevronDown />
       <ChevronUp />
       hello
-      <div className='bg-line'>
+      <div className='text-line'>
         wassup
       </div>
     </div>
