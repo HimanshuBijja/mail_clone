@@ -8,10 +8,10 @@ export default function Nav() {
                 <div>
                     <ChevronLeft size={30}/>
                 </div>
-                <div className="flex flex-row items-center justify-between gap-5">
-                    <Trash2Icon />
-                    <Mail />
-                <MoreHorizontal />
+                <div className="flex flex-row items-center justify-between gap-6">
+                    <Trash2Icon size={22} strokeWidth={2}/>
+                    <Mail size={22} strokeWidth={2}/>
+                    <MoreHorizontal size={22} strokeWidth={2}/>
             </div>
         </div>
     );
