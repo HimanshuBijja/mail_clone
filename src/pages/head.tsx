@@ -1,6 +1,10 @@
-import { ChevronDown, CornerUpLeft, MoreHorizontal } from "lucide-react";
+import { ChevronDown, ChevronUp, CornerUpLeft, MoreHorizontal } from "lucide-react";
+import { useState } from "react";
+import Dropdown from "./dropdown";
 
 export default function Head() {
+
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="my-5">
             <div className="grid grid-cols-8 items-center">
@@ -20,7 +24,7 @@ export default function Head() {
                     </div>
                     <div className="flex flex-row items-center gap-2">
                         to CSE
-                        <ChevronDown className="w-4 h-4" />
+                        {isOpen ? <ChevronUp className="w-4 h-4" onClick={() => setIsOpen(!isOpen)} /> : <ChevronDown className="w-4 h-4" onClick={() => setIsOpen(!isOpen)} />}
                     </div>
                 </div>
                 <div className="col-span-1 justify-self-end">
@@ -31,6 +35,7 @@ export default function Head() {
                 </div>
 
             </div>
+            {isOpen && <Dropdown />}
         </div>
     );
 }

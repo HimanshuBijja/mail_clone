@@ -5,6 +5,8 @@ function App() {
   return (
     <div className=''>
       <Message />
+      <hr className="text-secondary/20" />
+
     </div>
   )
 }
