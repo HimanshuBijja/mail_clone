@@ -2,7 +2,6 @@
 import { Star } from "lucide-react";
 import Head from "./head";
 import Nav from "./Nav";
-import Dropdown from "./dropdown";
 import Text from "./text";
 export default function Message() {
     return (
@@ -18,7 +17,6 @@ export default function Message() {
 
 
             <Head />
-            {/* <Dropdown /> */}
             <Text />
         </section>
     );
