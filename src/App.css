@@ -24,6 +24,6 @@
     body {
         @apply bg-background text-secondary/70 font-bold;
         font-family: "Roboto", sans-serif;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
