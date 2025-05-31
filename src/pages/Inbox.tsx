@@ -5,14 +5,15 @@ import Message from "./message";
 import Nav from "./Nav";
 import { MoreInfo } from "./moreInfo";
 import Foot from "./foot";
+import More from "./more";
 export function Inbox() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="">
             <Nav />
 
-            <div className="relative flex flex-row items-center justify-between mx-4 my-5 mb-7 ">
-                <h1 className="text-2xl font-medium text-foreground">
+            <div className="relative flex flex-row items-center justify-between mx-4 my-5 z-0 ">
+                <h1 className=" font-medium text-foreground" style={{fontSize: 23}}>
                     Message
                 </h1>
                 <Star size={22} strokeWidth={2} />
@@ -33,7 +34,7 @@ export function Inbox() {
             </div>
 
             {isOpen && <MoreInfo />}
-            <Foot />
+            <Foot />                   
         </div>
     );
 }
