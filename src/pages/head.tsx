@@ -2,6 +2,7 @@ import { ChevronDown, ChevronUp, CornerUpLeft, MoreHorizontal } from "lucide-rea
 import { useState } from "react";
 import Dropdown from "./dropdown";
 
+
 export default function Head({from, to, date, time}: {from: string, to: string, date: string, time: string}) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +30,8 @@ export default function Head({from, to, date, time}: {from: string, to: string, 
                 </div>
                 <div className="col-span-1 justify-self-end">
                     <div className="flex flex-row items-center gap-5">
-                        <CornerUpLeft  />
-                        <MoreHorizontal  />
+                        <CornerUpLeft size={22} strokeWidth={2} />
+                        <MoreHorizontal size={22} strokeWidth={2}    />
                     </div>
                 </div>
 
