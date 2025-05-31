@@ -4,7 +4,7 @@ import { ChevronLeft, Trash2Icon, Mail, MoreHorizontal } from "lucide-react";
 export default function Nav() {
 
     return (
-        <div className="flex flex-row items-center justify-between mx-4 my-5 mt-9">
+        <div className="flex flex-row items-center justify-between mx-4 my-5 mt-2">
                 <div>
                     <ChevronLeft size={30}/>
                 </div>

@@ -12,6 +12,7 @@
     --color-background: hsl(var(--background));
     --color-line: hsl(var(--line));
     --color-secondary: hsl(var(--secondary));
+    --color-card: hsl(var(--card));
 }
 
 @layer base {
@@ -20,6 +21,7 @@
         --foreground: 210, 13%, 91%;
         --line: 217, 89%, 62%;
         --secondary: 210, 7%, 64%;
+        --card: 0, 0%, 34%;
     }
     body {
         @apply bg-background text-secondary/70 font-bold;
@@ -28,8 +30,15 @@
     }
 }
 
+@layer utilities {
+    .text-lg {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
 a[href^="tel:"],
 a[href^="mailto:"] {
-  text-decoration: none !important;
-  color: inherit !important; /* Optional: makes the link use the surrounding text color */
+    text-decoration: none !important;
+    color: inherit !important; /* Optional: makes the link use the surrounding text color */
 }
