@@ -27,3 +27,9 @@
         font-size: 12px;
     }
 }
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  text-decoration: none !important;
+  color: inherit !important; /* Optional: makes the link use the surrounding text color */
+}
