@@ -7,6 +7,20 @@ import {
 } from "lucide-react";
 import More from "./more";
 
+// Define an array of background color classes
+const bgColors = [
+    "bg-1",
+    "bg-2",
+    "bg-3",
+    "bg-4",
+    "bg-5",
+    "bg-6",
+    "bg-7",
+    "bg-8",
+    "bg-9",
+    "bg-10",
+];
+
 export default function Message({ data }: { data: any }) {
     return (
         <section className=" w-screen px-4  pb-1">
@@ -19,11 +33,22 @@ export default function Message({ data }: { data: any }) {
 function Head({ data }: { data: any }) {
     const [more, setMore] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    // Get a random background color from the array
+    const randomBgColor =
+        data.name.charAt(0) == "H" || data.name.charAt(0) == "h"
+            ? "bg-1"
+            : data.name.charAt(0) == "C" || data.name.charAt(0) == "c"
+            ? "bg-7"
+            : bgColors[Math.floor(Math.random() * 10)];
+
     return (
         <div className="mb-4 mt-3">
             <div className="grid grid-cols-8 items-center">
                 <div className="col-span-1 justify-self-start">
-                    <div className=" w-11 h-11 rounded-full bg-amber-950 flex items-center justify-center text-white text-2xl font-light">
+                    <div
+                        className={`w-11 h-11 rounded-full ${randomBgColor} flex items-center justify-center text-white text-2xl font-light`}
+                    >
                         {data.name.charAt(0)}
                     </div>
                 </div>

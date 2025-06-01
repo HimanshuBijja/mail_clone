@@ -2,7 +2,6 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { userAtom, gatepassAtom } from "../store/atoms/atoms";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Divide } from "lucide-react";
 
 export function Info() {
     const [show, setShow] = useState(false);
