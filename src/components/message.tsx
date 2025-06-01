@@ -54,7 +54,7 @@ function Head({ data }: { data: any }) {
                 </div>
                 <div className="col-span-6 px-6">
                     <div className=" flex flex-row items-center gap-3">
-                        <div className="text-foreground font-medium">
+                        <div className="text-foreground font-bold text-sm">
                             {data.slug.from}
                         </div>
                         <div>{data.date}</div>

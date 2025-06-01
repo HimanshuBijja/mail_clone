@@ -81,7 +81,10 @@ function Details() {
                     Enter User Details
                 </h1>
                 <input
-                    onChange={(e) => (userDetails.name = e.target.value)}
+                    onChange={(e) => {
+                        userDetails.name = e.target.value;
+                        localStorage.setItem("userDetails.name", String(e.target.value));
+                    }}
                     className="w-full"
                     placeholder="Your Name"
                 />
@@ -89,7 +92,9 @@ function Details() {
                 <input
                     onChange={(e) => {
                         userDetails.from_name = e.target.value;
-                        gatepassDetails.from_name = e.target.value;
+                        gatepassDetails.to = e.target.value;
+                        localStorage.setItem("userDetails.from_name", String(e.target.value));
+                        localStorage.setItem("gatepassDetails.to", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="RollNo (Section) Name"
@@ -97,7 +102,9 @@ function Details() {
                 <input
                     onChange={(e) => {
                         userDetails.from_email = e.target.value;
-                        gatepassDetails.from_email = e.target.value;
+                        gatepassDetails.to_email = e.target.value;
+                        localStorage.setItem("userDetails.from_email", String(e.target.value));
+                        localStorage.setItem("gatepassDetails.to_email", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="your colleage email"
@@ -106,6 +113,7 @@ function Details() {
                     onChange={(e) => {
                         userDetails.week = e.target.value;
                         gatepassDetails.week = e.target.value;
+                        localStorage.setItem("week", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="Week (Mon, Tue, Wed, Thu, Fri, Sat, Sun)"
@@ -114,7 +122,8 @@ function Details() {
                     onChange={(e) => {
                         userDetails.date = e.target.value;
                         gatepassDetails.date = e.target.value;
-                    }}
+                        localStorage.setItem("date", String(e.target.value));
+                        }}
                     className="w-full"
                     placeholder="date 01 Jan "
                 />
@@ -122,6 +131,7 @@ function Details() {
                     onChange={(e) => {
                         userDetails.year = e.target.value;
                         gatepassDetails.year = e.target.value;
+                        localStorage.setItem("year", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="year 2025 "
@@ -130,6 +140,7 @@ function Details() {
                     onChange={(e) => {
                         userDetails.time = e.target.value;
                         gatepassDetails.time = e.target.value;
+                        localStorage.setItem("time", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="time 12:00 "
@@ -138,6 +149,7 @@ function Details() {
                     onChange={(e) => {
                         userDetails.time2 = e.target.value;
                         gatepassDetails.time2 = e.target.value;
+                        localStorage.setItem("time2", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="AM/PM"
@@ -145,22 +157,34 @@ function Details() {
                 {/* <input onChange={(e) => userDetails.to = e.target.value } className="w-full" placeholder="to CSE Gate pass" />
             <input onChange={(e) => userDetails.to_email = e.target.value } className="w-full" placeholder="to_email cse-gatepass@sreenidhi.edu.in" /> */}
                 <input
-                    onChange={(e) => (userDetails.message = e.target.value)}
+                    onChange={(e) => {
+                        userDetails.message = e.target.value;
+                        localStorage.setItem("userDetails.message", String(e.target.value));
+                    }}
                     className="w-full"
                     placeholder="Reason"
                 />
                 <input
-                    onChange={(e) => (userDetails.message2 = e.target.value)}
+                    onChange={(e) => {
+                        userDetails.message2 = e.target.value;
+                        localStorage.setItem("userDetails.message2", String(e.target.value));
+                    }}
                     className="w-full"
                     placeholder="Reason2"
                 />
                 <input
-                    onChange={(e) => (userDetails.message3 = e.target.value)}
+                    onChange={(e) => {
+                        userDetails.message3 = e.target.value;
+                        localStorage.setItem("userDetails.message3", String(e.target.value));
+                    }}
                     className="w-full"
                     placeholder="Reason3"
                 />
                 <input
-                    onChange={(e) => (userDetails.message4 = e.target.value)}
+                        onChange={(e) => {
+                        userDetails.message4 = e.target.value;
+                        localStorage.setItem("userDetails.message4", String(e.target.value));
+                    }}
                     className="w-full"
                     placeholder="Reason4"
                 />
@@ -183,7 +207,10 @@ function Details() {
                     <input onChange={(e) => gatepassDetails.to_email = e.target.value } className="w-full" placeholder=" to_email Your Email" /> */}
                 {/* <input onChange={(e) => gatepassDetails.cc_to_email = e.target.value } className="w-full" placeholder="cc email (gatepass@sreenidhi.edu.in)" /> */}
                 <input
-                    onChange={(e) => (gatepassDetails.message = e.target.value)}
+                    onChange={(e) => {
+                        gatepassDetails.message = e.target.value;
+                        localStorage.setItem("gatepassDetails.message", String(e.target.value));
+                    }}  
                     className="w-full"
                     placeholder="message (approved)"
                 />
