@@ -1,4 +1,4 @@
-export function MoreInfo() {
+export default function MoreHorizontalInfo() {
     return (
         <div
             className="mt-3 mb-2 text-lg no-underline mx-5 "

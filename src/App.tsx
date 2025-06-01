@@ -3,8 +3,6 @@ import { Inbox } from "./pages/Inbox";
 import "./App.css";
 import { Info } from "./pages/Info";
 
-
-
 function App() {
     return (
         <BrowserRouter>
@@ -13,7 +11,7 @@ function App() {
                 <Route path="/info" element={<Info />} />
             </Routes>
         </BrowserRouter>
-    )
+    );
 }
 
 export default App;

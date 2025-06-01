@@ -1,15 +1,11 @@
 import { MoreHorizontal, Star } from "lucide-react";
 
 import { useState } from "react";
-import Message from "./message";
-import Nav from "./Nav";
-import { MoreInfo } from "./moreInfo";
-import Foot from "./foot";
-import More from "./more";
-
-
-
-
+import Message from "../components/message";
+import Nav from "../components/Nav";
+import Foot from "../components/foot";
+import MoreHorizontalInfo from "../components/moreHorizontalInfo";
+import Header from "../components/header";
 
 export function Inbox() {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +13,7 @@ export function Inbox() {
         <div className="">
             <Nav />
 
-            <div className="relative flex flex-row items-center justify-between mx-4 my-5 z-0 ">
-                <h1 className=" font-medium text-foreground" style={{fontSize: 23}}>
-                    Message
-                </h1>
-                <Star size={22} strokeWidth={2} />
-            </div>
+            <Header />
             <Message />
             <hr className="text-secondary/20" />
             <Message />
@@ -38,11 +29,12 @@ export function Inbox() {
                 />
             </div>
 
-            {isOpen && <MoreInfo />}
-            <Foot />                   
+            {isOpen && <MoreHorizontalInfo />}
+            <Foot />
         </div>
     );
 }
+
 
 
 
