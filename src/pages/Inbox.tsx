@@ -15,11 +15,11 @@ export function Inbox() {
     const gatepass = useRecoilValue(gatepassAtom);
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="">
+        <div className="relative min-h-[99vh] w-screen">
             <Nav />
 
             <Header />
-            <Message data={user} />
+            <Message data={user} /> 
             <hr className="text-secondary/20" />
             <Message data={gatepass} />
 
