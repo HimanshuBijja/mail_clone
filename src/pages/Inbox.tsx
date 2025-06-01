@@ -6,17 +6,22 @@ import Nav from "../components/Nav";
 import Foot from "../components/foot";
 import MoreHorizontalInfo from "../components/moreHorizontalInfo";
 import Header from "../components/header";
+import { useRecoilValue } from "recoil";
+import { userAtom, gatepassAtom } from "../store/atoms/atoms";
 
 export function Inbox() {
+
+    const user = useRecoilValue(userAtom);
+    const gatepass = useRecoilValue(gatepassAtom);
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="">
             <Nav />
 
             <Header />
-            <Message />
+            <Message data={user} />
             <hr className="text-secondary/20" />
-            <Message />
+            <Message data={gatepass} />
 
             <div className="mx-4 ">
                 <MoreHorizontal
@@ -29,7 +34,7 @@ export function Inbox() {
                 />
             </div>
 
-            {isOpen && <MoreHorizontalInfo />}
+            {isOpen && <MoreHorizontalInfo data={user} />}
             <Foot />
         </div>
     );
