@@ -108,13 +108,13 @@ function Dropdown({ data }: { data: any }) {
 function Text({ data }: { data: any }) {
     return (
         <div
-            className="mt-4 mb-2 text-foreground/80 text-lg no-underline "
+            className="mt-4 mb-2 text-foreground/80 text-lg no-underline max-w-screen"
             style={{ fontSize: 15, fontWeight: 550 }}
         >
-            <div>{data.message}</div>
-            <div>{data.message2}</div>
-            <div>{data.message3}</div>
-            <div>{data.message4}</div>
+            <div className="max-w-screen">{data.message}</div>
+            <div className="max-w-screen">{data.message2}</div>
+            <div className="max-w-screen">{data.message3}</div>
+            <div className="max-w-screen">{data.message4}</div>
         </div>
     );
 }

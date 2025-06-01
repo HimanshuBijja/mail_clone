@@ -9,8 +9,8 @@ function App() {
         <RecoilRoot>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Inbox />} />
-                    <Route path="/info" element={<Info />} />
+                    <Route path="/inbox" element={<Inbox />} />
+                    <Route path="/qwertasd" element={<Info />} />
                 </Routes>
             </BrowserRouter>
         </RecoilRoot>
