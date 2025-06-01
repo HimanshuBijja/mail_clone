@@ -6,6 +6,11 @@ import Nav from "./Nav";
 import { MoreInfo } from "./moreInfo";
 import Foot from "./foot";
 import More from "./more";
+
+
+
+
+
 export function Inbox() {
     const [isOpen, setIsOpen] = useState(false);
     return (
