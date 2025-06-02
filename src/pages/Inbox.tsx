@@ -15,7 +15,7 @@ export function Inbox() {
     const gatepass = useRecoilValue(gatepassAtom);
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="relative min-h-[99vh] w-screen">
+        <div className="relative min-h-screen w-screen pb-15">
             <Nav />
 
             <Header />

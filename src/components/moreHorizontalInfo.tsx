@@ -1,7 +1,7 @@
 export default function MoreHorizontalInfo({ data }: { data: any }) {
     return (
         <div
-            className="mt-3 mb-2 text-lg no-underline mx-5 "
+            className="mt-3 mb-5 text-lg no-underline mx-5 "
             style={{ fontSize: 15, fontWeight: 550 }}
         >
             {" "}
