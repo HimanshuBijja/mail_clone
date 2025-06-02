@@ -1,5 +1,5 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { userAtom, gatepassAtom } from "../store/atoms/atoms";
+import { userAtom, gatepassAtom, messageAtom } from "../store/atoms/atoms";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ export function Info() {
             <button
                 className="bg-blue-500 text-white p-2 rounded-md"
                 onClick={() => {
-                    if (password == "@") {
+                    if (password == "?@#") {
                         setShow(true);
                     } else {
                         setShow(false);
@@ -73,9 +73,21 @@ function Details() {
 
     const [user, setUser] = useRecoilState(userAtom);
     const [gatepass, setGatepass] = useRecoilState(gatepassAtom);
+    const [heading, setHeading] = useRecoilState(messageAtom);
     const navigate = useNavigate();
     return (
         <section className="flex flex-col gap-2 text-foreground mt-10 justify-center px-4">
+            <div className="flex flex-col gap-2">
+                <h1 className="text-2xl font-bold text-center mb-4">Enter Heading</h1>
+                <input
+                    onChange={(e) => {
+                        setHeading(e.target.value);
+                        localStorage.setItem("heading", String(e.target.value));
+                    }}
+                    className="w-full"
+                    placeholder="Heading"
+                />
+            </div>
             <div className="flex flex-col gap-2">
                 <h1 className="text-2xl font-bold text-center mb-4">
                     Enter User Details
@@ -222,6 +234,7 @@ function Details() {
                     onClick={() => {
                         setUser(userDetails);
                         setGatepass(gatepassDetails);
+                        setHeading(heading);
                         navigate("/inbox", { replace: true });
                     }}
                 >
