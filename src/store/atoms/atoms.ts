@@ -49,3 +49,7 @@ export const gatepassAtom = atom({
     },
 })
 
+export const messageAtom = atom({
+    key: "messageAtom",
+    default: localStorage.getItem("heading") ?? "Permission"
+})

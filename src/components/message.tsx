@@ -47,7 +47,7 @@ function Head({ data }: { data: any }) {
             <div className="grid grid-cols-8 items-center">
                 <div className="col-span-1 justify-self-start">
                     <div
-                        className={`w-11 h-11 rounded-full ${randomBgColor} flex items-center justify-center text-white text-2xl font-light`}
+                        className={`w-11 h-11 rounded-full ${randomBgColor} flex items-center justify-center text-white text-2xl font-medium`}
                     >
                         {data.name.charAt(0)}
                     </div>
