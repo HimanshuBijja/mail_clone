@@ -5,7 +5,7 @@ import { ChevronsLeft } from "lucide-react";
 export default function Foot() {
     return (
         <div
-            className="absolute bottom-0 left-0 w-full bg-background z-20"
+            className="absolute bottom-1 left-0 w-full bg-background z-20"
             style={{ fontSize: 13, fontWeight: 550 }}
         >
             <hr className="text-secondary/20" />

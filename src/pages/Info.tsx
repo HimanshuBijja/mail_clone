@@ -92,14 +92,14 @@ function Details() {
                 <h1 className="text-2xl font-bold text-center mb-4">
                     Enter User Details
                 </h1>
-                <input
+                {/* <input
                     onChange={(e) => {
                         userDetails.name = e.target.value;
                         localStorage.setItem("userDetails.name", String(e.target.value));
                     }}
                     className="w-full"
                     placeholder="Your Name"
-                />
+                /> */}
 
                 <input
                     onChange={(e) => {
@@ -107,11 +107,18 @@ function Details() {
                         gatepassDetails.to = e.target.value;
                         localStorage.setItem("userDetails.from_name", String(e.target.value));
                         localStorage.setItem("gatepassDetails.to", String(e.target.value));
+                        const firstword = e.target.value.split(" ")[0].toLowerCase();
+                        localStorage.setItem("userDetails.from_email", String(firstword) + "@cse.sreenidhi.edu.in");
+                        localStorage.setItem("gatepassDetails.to_email", String(firstword) + "@cse.sreenidhi.edu.in");
+                        
+                        const thirdword = e.target.value.split(" ")[2];
+                        localStorage.setItem("userDetails.name", String(thirdword));
+
                     }}
                     className="w-full"
                     placeholder="RollNo (Section) Name"
                 />
-                <input
+                {/* <input
                     onChange={(e) => {
                         userDetails.from_email = e.target.value;
                         gatepassDetails.to_email = e.target.value;
@@ -120,7 +127,7 @@ function Details() {
                     }}
                     className="w-full"
                     placeholder="your colleage email"
-                />
+                /> */}
                 <input
                     onChange={(e) => {
                         userDetails.week = e.target.value;
@@ -139,7 +146,7 @@ function Details() {
                     className="w-full"
                     placeholder="date 01 Jan "
                 />
-                <input
+                {/* <input
                     onChange={(e) => {
                         userDetails.year = e.target.value;
                         gatepassDetails.year = e.target.value;
@@ -147,7 +154,7 @@ function Details() {
                     }}
                     className="w-full"
                     placeholder="year 2025 "
-                />
+                /> */}
                 <input
                     onChange={(e) => {
                         userDetails.time = e.target.value;
